@@ -10,7 +10,7 @@ import fs from "fs";
 const discountOffers = [
   new DiscountOffer("Velib", 20, 30),
   new DiscountOffer("Naturalia", 10, 5, 1),
-  new IncrementalOffer("Vinted", 5, 40, 1),
+  new IncrementalOffer("Vinted", 5, 40),
   new PermanentOffer("Ilek", 15, 40),
   new DiscountOffer("BlackMarket", 10, 40, -2)
 ];
