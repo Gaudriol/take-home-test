@@ -55,26 +55,26 @@ describe("Store", () => {
   describe("Incremental Discount", () => {
     it("should increase incremental discount after update", () => {
       expect(
-        new Store([new IncrementalOffer("Vinted", 11, 20, 1)]).updateDiscounts()
-      ).toEqual([new IncrementalOffer("Vinted", 10, 21, 1)]);
+        new Store([new IncrementalOffer("Vinted", 11, 20)]).updateDiscounts()
+      ).toEqual([new IncrementalOffer("Vinted", 10, 21)]);
     });
 
     it("should increase by 2 after 10 days left", () => {
       expect(
-        new Store([new IncrementalOffer("Vinted", 10, 20, 1)]).updateDiscounts()
-      ).toEqual([new IncrementalOffer("Vinted", 9, 22, 1)]);
+        new Store([new IncrementalOffer("Vinted", 10, 20)]).updateDiscounts()
+      ).toEqual([new IncrementalOffer("Vinted", 9, 22)]);
     });
 
     it("should increase by 3 after 5 days left", () => {
       expect(
-        new Store([new IncrementalOffer("Vinted", 5, 20, 1)]).updateDiscounts()
-      ).toEqual([new IncrementalOffer("Vinted", 4, 23, 1)]);
+        new Store([new IncrementalOffer("Vinted", 5, 20)]).updateDiscounts()
+      ).toEqual([new IncrementalOffer("Vinted", 4, 23)]);
     });
 
     it("should drop to zero at expiration", () => {
       expect(
-        new Store([new IncrementalOffer("Vinted", 0, 20, 1)]).updateDiscounts()
-      ).toEqual([new IncrementalOffer("Vinted", -1, 0, 1)]);
+        new Store([new IncrementalOffer("Vinted", 0, 20)]).updateDiscounts()
+      ).toEqual([new IncrementalOffer("Vinted", -1, 0)]);
     });
   });
 });

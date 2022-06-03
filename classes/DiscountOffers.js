@@ -46,6 +46,15 @@ export class PermanentOffer extends DiscountOffer {
 }
 
 export class IncrementalOffer extends DiscountOffer {
+  constructor(
+    partnerName,
+    expiresIn,
+    discountRateInPercent,
+    dailyDiscountChange = 1
+  ) {
+    super(partnerName, expiresIn, discountRateInPercent, dailyDiscountChange);
+  }
+
   getDiscountCoef() {
     let discountCoef = 1;
     if (this.expiresIn <= 10) {
