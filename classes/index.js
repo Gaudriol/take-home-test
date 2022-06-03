@@ -1,2 +1,6 @@
-export { DiscountOffer } from "./DiscountOffer";
+export {
+  DiscountOffer,
+  PermanentOffer,
+  IncrementalOffer
+} from "./DiscountOffers";
 export { Store } from "./Store";

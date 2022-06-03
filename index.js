@@ -1,12 +1,17 @@
-import { Store, DiscountOffer } from "./classes";
+import {
+  Store,
+  DiscountOffer,
+  IncrementalOffer,
+  PermanentOffer
+} from "./classes";
 
 import fs from "fs";
 
 const discountOffers = [
   new DiscountOffer("Velib", 20, 30),
-  new DiscountOffer("Naturalia", 10, 5),
-  new DiscountOffer("Vinted", 5, 40),
-  new DiscountOffer("Ilek", 15, 40)
+  new DiscountOffer("Naturalia", 10, 5, 1),
+  new IncrementalOffer("Vinted", 5, 40, 1),
+  new PermanentOffer("Ilek", 15, 40)
 ];
 const store = new Store(discountOffers);
 
