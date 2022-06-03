@@ -74,22 +74,3 @@ export class IncrementalOffer extends DiscountOffer {
     this.discountInPercent = 0;
   }
 }
-
-// reduit de 1 par jour X
-// après expiration réduit 2x plus vite X
-// peut pas changer à plus de 50 X
-// new DiscountOffer("Velib", 20, 30),
-
-// discount augmente chaque jour X
-// apres expiration augmente 2x plus vite X
-// new DiscountOffer("Naturalia", 10, 5, 1),
-
-// réduit de 2 en dessous de 10 jours X
-//        de 3 en dessous de 5 X
-//        à 0 à l'expiration X
-// new IncrementalOffer("Vinted", 5, 40, 1),
-
-// ne réduit jamais de jour ou discount X
-// new PermanentOffer("Ilek", 15, 40);
-
-// new DiscountOffer("BlackMarket", 15, 40, -2);
