@@ -1,4 +1,4 @@
-import { Store, DiscountOffer } from "./store";
+import { Store, DiscountOffer } from "./classes";
 
 import fs from "fs";
 
